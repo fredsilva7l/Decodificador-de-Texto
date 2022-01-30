@@ -1,12 +1,12 @@
-var input = document.querySelector("#input-text"); //input-text
+var input = document.querySelector("#input-text");
 
-var botaoCripto = (document.querySelector("#button-cripto")); //button-cripto
+var botaoCripto = (document.querySelector("#button-cripto"));
 botaoCripto.onclick = (startCripto);
 
-var botaoDeCripto = (document.querySelector("#button-descripto")); //#button-descripto
+var botaoDeCripto = (document.querySelector("#button-descripto"));
 botaoDeCripto.onclick = (startDeCripto);
 
-var botaoCopia = (document.querySelector("#button-copy")); //button-copy
+var botaoCopia = (document.querySelector("#button-copy"));
 botaoCopia.onclick = (copia);
 
 function cripto() {
@@ -49,7 +49,7 @@ function limpa() {
    limpa.value = ("");
 }
 
-function startCripto() {//--INICIA O CODIFICADOR CASO O CAMPO NÃO ESTEJA VAZIO--//
+function startCripto() {
    if(input.value == "") {
        limpa();
    }else {
@@ -57,7 +57,7 @@ function startCripto() {//--INICIA O CODIFICADOR CASO O CAMPO NÃO ESTEJA VAZIO-
    }
 }
 
-function startDeCripto() {//--VERIFICA SE O TEXTO INSERIO ESTÁ CODIFICADO E INICIA O DECODIFICADOR--//
+function startDeCripto() {
    var textoStart = (document.querySelector("#input-text"));
    var palavrasChaves = ['enter', 'imes', 'ai', 'ober', 'ufat'];
    var textoValor = (textoStart.value);
