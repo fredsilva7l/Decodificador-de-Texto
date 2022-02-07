@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1">
 		<title>Código Secreto</title>
 
 		<link rel="stylesheet" href="reset.css">
@@ -10,13 +11,13 @@
 		<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 	</head>
 
-    <body>
-        <header>
+    <body class="app">
+        <header class="cabeçalho">
             <img src="imagens/alura.png" class="logo" alt="logo alura">      
-            <h1>Código Secreto</h1>
+            <h1 class="titulo-principal">Código Secreto</h1>
 		</header>
   
-        <main>
+        <main class="corpo">
             <section class="instruçoes">
                     <p id="titulo-instruçoes">Instruçoes:</p>
                     <p>Use apenas letras minusculas e sem acento</p>
@@ -27,18 +28,18 @@
             <section class="box">
                 <fieldset class="caixaesquerda">
                     <textarea cols="40" rows="10" class="textarea" id="input-text" placeholder="Insira o texto aqui"></textarea>
-                    <button class="button" id="button-cripto">Criptografar</button>
-                    <button class="button" id="button-descripto">Descriptografar</button>
+                            <button class="button" id="button-cripto">Criptografar</button>
+                            <button class="button" id="button-descripto">Descriptografar</button>
                 </fieldset>
         
                 <fieldset class="caixadireita">
                     <textarea cols="40" rows="10" class="textarea" id="output-text" placeholder="Aqui estará o resultado"></textarea>
-                    <button class="button" id="button-copy">Copiar</button>
+                        <button class="button" id="button-copy">Copiar</button>
                 </fieldset>
             </section>
         </main>
 
-        <footer>
+        <footer class="rodape">
                 <p>&copy; Frederico Gonçalves - 2022</p>
                 <a href="https://www.linkedin.com/in/fredericogon%C3%A7alves/" target="_blank" title="LinkedIn" ><img src="imagens/ln.png" class="icone" alt="página linkedin"></a>            
                 <a href="https://github.com/fredsilva7l" target="_blank" title="Github" ><img src="imagens/git.png" class="icone" alt="página do github"></a>
