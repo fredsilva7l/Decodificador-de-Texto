@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-        <meta name="viewport" content="initial-scale=1">
-		<title>Código Secreto</title>
 
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Código Secreto</title>
 
-    <body class="app">
-        <header class="cabeçalho">
-            <img src="imagens/alura.png" class="logo" alt="logo alura">      
-            <h1 class="titulo-principal">Código Secreto</h1>
-		</header>
-  
-        <main class="corpo">
-            <section class="instruçoes">
-                    <p id="titulo-instruçoes">Instruçoes:</p>
-                    <p>Use apenas letras minusculas e sem acento</p>
-                    <p>No lado esquerdo será onde irá ser adicionada a mensagem desejada</p>
-                    <p>No lado direito irá aparecer o resultado que deseja</p>
-            </section>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+</head>
 
-            <section class="box">
-                <fieldset class="caixaesquerda">
-                    <textarea cols="40" rows="10" class="textarea" id="input-text" placeholder="Insira o texto aqui"></textarea>
-                            <button class="button" id="button-cripto">Criptografar</button>
-                            <button class="button" id="button-descripto">Descriptografar</button>
-                </fieldset>
-        
-                <fieldset class="caixadireita">
-                    <textarea cols="40" rows="10" class="textarea" id="output-text" placeholder="Aqui estará o resultado"></textarea>
-                        <button class="button" id="button-copy">Copiar</button>
-                </fieldset>
-            </section>
-        </main>
+<body class="app">
+    <header class="cabeçalho">
+        <img src="imagens/alura.png" class="logo" alt="logo alura">
+        <h1 class="titulo-principal">Código Secreto</h1>
+    </header>
 
-        <footer class="rodape">
-                <p>&copy; Frederico Gonçalves - 2022</p>
-                <a href="https://www.linkedin.com/in/fredericogon%C3%A7alves/" target="_blank" title="LinkedIn" ><img src="imagens/ln.png" class="icone" alt="página linkedin"></a>            
-                <a href="https://github.com/fredsilva7l" target="_blank" title="Github" ><img src="imagens/git.png" class="icone" alt="página do github"></a>
-        </footer>
+    <main class="corpo">
+        <section class="instruçoes">
+            <ul class="container">
+                <li id="titulo-instruçoes">Instruçoes:</li>
+                <li>Use apenas letras minusculas e sem acento</li>
+                <li>Adicione a mensagem no lado esquerdo</li>
+                <li>No lado direito estará o resultado</li>
+                <li id="erroDecripto" class="erro aviso">Texto não Criptografado</li>
+                <li id="erroNumero" class="erro aviso">Você tem números no texto</li>
+                <li id="erroMaiscula" class="erro aviso">Você tem letras maisculas no texto</li>
+                <li id="erroCaractere" class="erro aviso">Você tem caracteres especiais no texto</li>
+            </ul>
+        </section>
 
-        <script src="script.js" ></script>
-    </body>
+        <section class="box">
+            <fieldset class="caixaesquerda">
+                <textarea cols="40" rows="10" class="textarea" id="input-text"
+                    placeholder="Insira o texto aqui"></textarea>
+                <button class="button" id="button-cripto">Criptografar</button>
+                <button class="button" id="button-descripto">Descriptografar</button>
+            </fieldset>
+
+            <fieldset class="caixadireita">
+                <textarea cols="40" rows="10" class="textarea" id="output-text"
+                    placeholder="Aqui estará o resultado"></textarea>
+                <button class="button" id="button-copy">Copiar</button>
+            </fieldset>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; Frederico Gonçalves - 2022</p>
+        <a href="https://www.linkedin.com/in/fredericogon%C3%A7alves/" target="_blank" title="LinkedIn"><img
+                src="imagens/ln.png" class="icone" alt="página linkedin"></a>
+        <a href="https://github.com/fredsilva7l" target="_blank" title="Github"><img src="imagens/git.png" class="icone"
+                alt="página do github"></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 
 </html>

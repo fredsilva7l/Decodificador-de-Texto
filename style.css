@@ -1,12 +1,12 @@
 .app {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "cabeçalho"
         "corpo"
         "rodape";
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
 }
 
 .cabeçalho {
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    background: linear-gradient(black,grey);
+    background: linear-gradient(black, grey);
 }
 
 .logo {
@@ -32,23 +32,32 @@
 .corpo {
     grid-area: corpo;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "instruçoes"
         "box";
-        grid-template-columns: 100vw;
-        grid-template-rows: auto auto;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
 }
 
-.instruçoes{    
+.instruçoes {
     grid-area: instruçoes;
     display: flex;
     flex-direction: column;
     padding-top: 0.5rem;
-    
+
     font-size: 1em;
     text-align: center;
     font-style: italic;
     transition: 3s;
+}
+
+.aviso {
+    color: red;
+    font-size: 1.5em;
+}
+
+.erro {
+    display: none;
 }
 
 #titulo-instruçoes {
@@ -59,11 +68,11 @@
 .box {
     grid-area: box;
     display: grid;
-    grid-template-areas: 
-    "caixaesquerda" 
-    "caixadireita";
-        grid-template-columns: auto;
-        grid-template-rows: auto;  
+    grid-template-areas:
+        "caixaesquerda"
+        "caixadireita";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
 .caixaesquerda {
@@ -113,7 +122,7 @@
     grid-area: rodape;
     text-align: center;
     padding: 0.5rem;
-    
+
     color: white;
     background: url("imagens/bg.jpg");
     opacity: 0.8;
