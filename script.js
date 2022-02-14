@@ -10,7 +10,7 @@ var botaoCopia = (document.querySelector("#button-copy"));
 botaoCopia.onclick = (copia);
 
 function verificaTexto() {
-    if ((verificaNumero() * verificaMaiscula() * verificaCaractere()) != 0) {
+    if ((verificaNumero() * verificaMaiscula() * verificaCaractere()) == 1) {
         cripto();
         exibeErro();
     } else {
@@ -27,13 +27,8 @@ function startDeCripto() {
     if (input.value == "") {
         limpaInput();
     } else if (verifica) {
-        var erroDecript = document.querySelector("#erroDecripto");
-        erroDecript.classList.add("erro")
         deCripto();
         limpaInput();
-    } else {
-        var erroDecript = document.querySelector("#erroDecripto");
-        erroDecript.classList.remove("erro")
     }
 }
 
@@ -85,8 +80,9 @@ function limpaOutput() {
 function verificaNumero() {
     var verificaNumero = input.value;
     for (var auxNum = 0; auxNum < verificaNumero.length; auxNum++) {
+        var conversao = verificaNumero[auxNum].charCodeAt(0);
 
-        if (verificaNumero[auxNum] == " ") auxNum++
+        if (conversao == 32) auxNum++
 
         else if (!isNaN(verificaNumero[auxNum])) return 0;
     }
@@ -98,7 +94,11 @@ function verificaMaiscula() {
     for (var auxText = 0; auxText < verificaText.length; auxText++) {
         var conversao = verificaText[auxText].charCodeAt(0);
 
-        if (conversao == 32) auxText++;
+        if (conversao == 32) {
+            auxText++;
+            console.log("cheguei aqui");
+        }
+        
         
         else if (conversao >= 65 && conversao <= 90) return 0;
     }
@@ -121,6 +121,9 @@ function exibeErro() {
     var erroNumero = document.querySelector("#erroNumero");
     var erroMaiscula = document.querySelector("#erroMaiscula");
     var erroCaractere = document.querySelector("#erroCaractere");
+
+    var erroDecript = document.querySelector("#erroDecripto");
+    erroDecript.classList.remove("erro")
 
     if (verificaNumero() == 0) erroNumero.classList.remove("erro");
     else erroNumero.classList.add("erro");
