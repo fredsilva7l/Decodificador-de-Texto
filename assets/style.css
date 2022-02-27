@@ -1,0 +1,134 @@
+.app {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "cabeçalho"
+        "corpo"
+        "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+.cabeçalho {
+    grid-area: cabeçalho;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(black, grey);
+}
+
+.logo {
+    width: 4rem;
+}
+
+.titulo-principal {
+    flex-basis: 100vw;
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.corpo {
+    grid-area: corpo;
+    display: grid;
+    grid-template-areas:
+        "instruçoes"
+        "box";
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+}
+
+.instruçoes {
+    grid-area: instruçoes;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+
+    font-size: 1em;
+    text-align: center;
+    font-style: italic;
+    transition: 3s;
+}
+
+.aviso {
+    color: red;
+    font-size: 1.5em;
+}
+
+.erro {
+    display: none;
+}
+
+#titulo-instruçoes {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.box {
+    grid-area: box;
+    display: grid;
+    grid-template-areas:
+        "caixaesquerda"
+        "caixadireita";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.caixaesquerda {
+    grid-area: caixaesquerda;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.caixadireita {
+    grid-area: caixadireita;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.textarea:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, 0.3);
+}
+
+.button {
+    color: black;
+    font-weight: bold;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+.button:hover {
+    color: blue;
+    border-color: blue;
+    text-decoration: underline;
+}
+
+.button:active {
+    color: green;
+    border-color: green;
+    text-decoration: underline;
+}
+
+.rodape {
+    grid-area: rodape;
+    text-align: center;
+    padding: 0.5rem;
+
+    color: white;
+    background: url("imagens/bg.jpg");
+    opacity: 0.8;
+}
+
+.icone {
+    width: 1.5rem;
+    margin: 0.5rem;
+}
